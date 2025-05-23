@@ -1,6 +1,9 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+
+const response = await fetch("http://localhost:3000/api/health");
+const data = await response.json();
 ---
 
 <div id="container">
@@ -19,6 +22,7 @@ import background from "../assets/background.svg";
         To get started, open the <code><pre>src/pages</pre></code> directory in your
         project.
       </h1>
+      {JSON.stringify(data, null, 2)}
       <section id="links">
         <a class="button" href="https://docs.astro.build">Read our docs dude!</a
         >
