@@ -1,9 +1,17 @@
 {
-  "name": "poc-monolito-mcp",
+  "name": "poc-monolito-mcp-monorepo",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run dev:frontend & npm run dev:server",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:server": "npm run start -w server",
+    "build": "npm run build -w frontend",
+    "preview": "npm run preview -w frontend"
   },
   "repository": {
     "type": "git",
@@ -16,8 +24,5 @@
     "url": "https://github.com/IsaacMiguel/POC-MONOLITO-MCP/issues"
   },
   "homepage": "https://github.com/IsaacMiguel/POC-MONOLITO-MCP#readme",
-  "description": "",
-  "dependencies": {
-    "express": "5.1.0"
-  }
+  "description": "Monorepo for POC-MONOLITO-MCP containing frontend and server workspaces"
 }
