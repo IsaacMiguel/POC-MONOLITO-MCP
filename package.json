@@ -24,5 +24,9 @@
     "url": "https://github.com/IsaacMiguel/POC-MONOLITO-MCP/issues"
   },
   "homepage": "https://github.com/IsaacMiguel/POC-MONOLITO-MCP#readme",
-  "description": "Monorepo for POC-MONOLITO-MCP containing frontend and server workspaces"
+  "description": "Monorepo for POC-MONOLITO-MCP containing frontend and server workspaces",
+  "engines": {
+    "node": "22.16.0",
+    "npm": "10.9.2"
+  }
 }
